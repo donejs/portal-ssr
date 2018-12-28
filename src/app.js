@@ -17,6 +17,21 @@ const AppViewModel = DefineMap.extend("AppViewModel", {
   },
   routeData: {
     default: () => route.data
+  },
+  get pageComponent () {
+    switch (this.routeData.page) {
+      case 'home': {
+        return window.steal.import('~/pages/page-one.component').then(({default: PageOne}) => {
+          return new PageOne()
+        })
+      }
+
+      case 'page-two': {
+        return window.steal.import('~/pages/page-two.component').then(({default: PageTwo}) => {
+          return new PageTwo()
+        })
+      }
+    }
   }
 });
 
