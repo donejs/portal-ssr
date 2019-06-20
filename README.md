@@ -1,5 +1,7 @@
 # portal-ssr
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/donejs/portal-ssr.svg)](https://greenkeeper.io/)
+
 Welcome to the portal-ssr DoneJS application!
 
 ## Getting started
